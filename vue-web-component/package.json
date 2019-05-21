@@ -5,7 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-other-component": "npx vue-cli-service build --target wc --name ../compiled/other-element/my-other-element ./src/components/other-web-component/compile.js",
+    "build-vue-component": "npx vue-cli-service build --target wc --name ../compiled/custom-element/my-custom-element ./src/components/vue-web-component/compile.js",
+    "build-all-components": "npm run build-other-component && npm run build-vue-component"
   },
   "dependencies": {
     "core-js": "^2.6.5",
